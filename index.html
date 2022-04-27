@@ -17,7 +17,7 @@
 		h4{font-size: 2rem; font-weight: 500;}
 		p{font-size: 1.6rem; line-height: 3rem;}
 		b{font-weight: 700;}
-		b.sans,b.serif{font-weight: 400;}
+		b.sans,b.serif,b.errw,b.errb{font-weight: 400;}
 		a{display: inline-block;
 			font-size: 1.5rem;
 			font-weight: 500;
@@ -51,19 +51,33 @@
 		.gradient{background: linear-gradient(0deg, rgba(13,13,13,1) 80%, rgba(255,255,255,1) 100%); color: white;}
 		.blur{filter: blur(3px);}
 		.background-img{background: url('tv.png'); background-size: 100%; height: 80vh; color: white; z-index: 3;}
-		.background-img-1{background: url('remote.png' ); height: 80vh; background-size: 50%; }
-		.background-img2{background: url('leg.png'); background-size: cover;  color: white;}
-		.background-img3{background: url('scale.png'); background-size: 100%; height: 1450px; color: white; opacity: 0.3;}
-		.glow{text-shadow: white 0 0 5px;}
+		.background-img-1{background: url('remote.png' ); height: 80vh; background-size: 50%;}
+		.background-img2{background: url('leg.png'); background-size: 100vw;  color: white; background-attachment: fixed; background-position: top: 100px;}
+		.background-img3{background: url('scale.png'); background-size: 100%; height: 1450px; color: white; opacity: 0.5;}
+		.errw2 {display: inline-block; 
+    			position:relative; background-size: 0% 100%;
+    			background: url('white.svg') bottom repeat-x; }
+  		 .errw {display: inline-block; 
+    			position:relative; background-size: 0% 100%;
+    			background: url('white2.svg') bottom repeat-x; }
+    	.errb {display: inline-block;
+    			position:relative; background-size: 0% 100%;
+    			background: url('black.svg') bottom repeat-x;}
+		.lie{background-image: url('lie.png'); background-repeat: no-repeat; background-attachment: fixed; background-position: top 270px left 365px ; background-size: 400px;}
+		.glow{text-shadow: white 0 0 5px; animation: glow 2s alternate infinite;}
+		.space{background-image: url(space.gif); background-attachment: fixed; background-size: cover; color: white;}
+		.bbi{width: 80px; position: fixed; top: 10vh; left: 48vw; animation: bbi 2s forwards 5s;}
+		@keyframes glow{0%{text-shadow: white 0 0 5px; color: white;} 40%{text-shadow: white 0 0 2px; color: gray;} 75%{text-shadow: white 0 0 8px; color: white;} 100%{text-shadow: white 0 0 5px; color: white;}}
+		@keyframes bbi{from{opacity: 1} to{opacity: 0}}
 
 	</style>
 </head>
 <body>
-<section class="black">
+<section class="black" style="overflow: hidden;">
 	<div class="row background-img textalign-center"></div>
 	<div class="col-1 blur textalign-center" style="position: absolute; top:400px; left: 0vw;"> <h4>잠시 후 생방송이 진행됩니다. <br> 전국 시청자분들은 가급적 시청을 삼가주시길 바랍니다.</h4></div>
 	<img src="remote.png" style=" width: 60vw; position: relative; left: -100px; top: -100px;"></div>
-	<img src="bbi.svg" style="width: 80px; position: absolute; top: 10vh; left: 48vw;">
+	<img src="bbi.svg" class="bbi">
 </section>
 <section class="background-img2" style="margin: 0; padding: 0; color: black; height: 130vh">
 	<div class="row" style="position: relative; top: 300px">
@@ -71,48 +85,50 @@
 			<br><br><p><b>PM 4:28</b></p>
 			<h2>그 시각,</h2>
 			<br><br><br>
-			<p>단 한명만이 도로를 비틀비틀거리며 활보하고 있었대. 누구냐고? 공주!
-			공주는 생방송이 시작하기도 30분 전, 이미 풀려나 있었거든. 너는 전세계에 그 모습을 보여주고 있는데 말이야!ㅋㅋ</p>
+			<p>단 한명만이 도로를 비틀비틀, 활보하고 있었대. 누구냐고? ...공주!<br>
+			공주는 생방송이 시작하기도 30분 전, <b class="errb">진작에 풀려나 있었거든.</b> 너는 전세계 앞에서 그 꼴을 하고 있는데 말이야!ㅋㅋ</p>
 		</div>
 		<div class="col-2"></div>
 	</div>
 </section>
-<section class=>
-
-	<div class="row">
-		<div class="col-2"><img src="lie.png" style="width: 400px"></div>
-		<div class="col-2"><p><br><br><br>결국 공주는 그 자리에 쓰러졌어. 도와주는 사람이 아무도 없었거든! <br><br>...더 정확하게 말하자면, 그 거리에는 공주 외에 아무도 없었어. 다들 TV 보러갔나?</p></div>
+<section class="lie" style=" margin: 0;padding: 0;">
+	<div class="row ">
+		<div class="col-2"></div>
+			<div class="col-2" style="height: 100vh;"></div></div>
+	<div class="row" style=" margin-bottom: 0;">
+		<div class="col-2"></div>
+		<div class="col-2" style="padding-bottom: 200px;"><p>결국 공주는 그 자리에 쓰러졌어. 아무도 그녀를 도와주지 않았어.<br><br>...더 정확하게 말하자면, 그 거리에는 공주 외에 아무도 없었어. 단 한 명도! <br>어디서 재미보고 있나?</p></div>
 	</div>
 </section>
-<section class="black">
+<section class="space" style="z-index: 0;">
 	<div class="row">
 		<div class="col-2"></div>
-		<div class="col-2"><p>이 이야기는 여기까지야.<br><br>총리를 옹호하면서, 결국은 궁금증을 참지 못한 국민들. 어떻게 생각해? 난 사실 저들 모습과 다르다고 장담 못하겠어. 이처럼 우리들은 상충되는 두가지 면을 동시에 갖추고 있는 것 같아.</p></div>
+		<div class="col-2"><p><br><br>이 이야기는 여기까지야.<br><br>앞에선 총리를 옹호하면서, 결국엔 궁금증을 참지 못한 국민들.<br>어떻게 생각해? 정말 저들의 모습과 다르다고 확신할 수 있을까. <br><br>이처럼 우리는 상충되는 두 가지<br>모습을 동시에 갖고 있어.</p></div>
 	</div>
 	<div class="row"><img src="sapiens.png" style="width: 40%; margin: auto;"></div>
 	<div class="row" style="padding: 0;">
 		<div class="col-3"></div>
 		<div class="col-3"></div>
-		<div class="col-3"><p>유발 하라리의 <b class="serif"><사피엔스></b>에 의하면,</p></div>
+		<div class="col-3"><p>유발 하라리의 <b class="serif">『사피엔스』</b>에 의하면,</p></div>
 	</div>
 	<div class="row"style="padding: 0;">
 		<div class="col-3"></div>
-		<div class="col-3"><p>사피엔스가 세상을 지배할 수 있었던 이유 중 하나는, 결속력을 높이고 자유로운 의사소통 능력을 향상시킨 '뒷담화' 덕분이래.</p></div>
+		<div class="col-3"><p>사피엔스가 세상을 지배할 수 있었던 이유 중 하나는, 결속력을 높이고 자유로운 의사소통 능력을 향상시킨<br><b class="serif">‘뒷담화’</b> 덕분이래.</p></div>
 		<div class="col-3"></div>
 	</div>
 	<div class="row"style="padding: 0;">
-		<div class="col-3"><p>우리가 그토록  혐오하는 비윤리가 인류의 기원이었다니!</p></div>
+		<div class="col-3"><p>우리가 그토록 혐오하는 반윤리가 인류의 기원이었다니!</p></div>
 		<div class="col-3"></div>
 		<div class="col-3"></div>
 	</div>
 	<div class="row background-img3"></div>
 		<div class="col-1 textalign-center" style="position: relative; top: -900px;">
-			<h1 class="glow">윤리, 본능.</h1><br><br><br>
-			<p>우리는 늘 이 두가지 속에서 갈등하고 살아가.</p>
+			<h1 class="glow">본능, 윤리.</h1><br><br><br>
+			<p>우리는 앞으로도 이 두 가지 사이에서 갈등하며 살아가게 될 거야.</p>
 		</div>
 
 	<div class="row">
-		<div class="col-1 textalign-center"> <p>이제 마지막 질문이야. 이번엔 보기는 없어.</p></div>
+		<div class="col-1 textalign-center"> <p>이제 마지막 질문이야. 보기는 없어!</p></div>
 	</div>
 <div class="row" style=" padding-bottom: 10px;">
 	<div class="col-1 textalign-center"style=" text-shadow: white 0 0 3px;">	
@@ -122,7 +138,7 @@
 </section>
 <footer>
 	<div class="textalign-center">
-	2022&copy;조가은<br>레퍼런스: 『유발하라리, 사피엔스』, 『블랙미러 시즌 1 '공주와 돼지'』</div>
+	Copylight&copy;2022 조가은 all right reserved.<br>레퍼런스 | 유발하라리, 『사피엔스』, 넷플릭스 오리지널 블랙미러, 시즌 1〈공주와 돼지〉</div>
 </footer>
 </body>
 </html>
